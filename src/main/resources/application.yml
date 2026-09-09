@@ -1,0 +1,53 @@
+debug: true
+
+spring:
+  application:
+    name: scrobbledelia
+  datasource:
+    url: jdbc:postgresql://localhost:5433/snoobble_fm
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:postgres}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+  http:
+    client:
+      connect-timeout: 5s
+      read-timeout: 10s
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+  rabbitmq:
+    host: ${RABBITMQ_HOST:localhost}
+    port: ${RABBITMQ_PORT:5672}
+    username: ${RABBITMQ_USERNAME:guest}
+    password: ${RABBITMQ_PASSWORD:guest}
+
+server:
+  port: 8082
+
+logging:
+  level:
+    org.flywaydb: DEBUG
+    org.springframework.security: DEBUG
+    org.springframework.amqp: DEBUG
+    com.rabbitmq: DEBUG
+
+jwt:
+  secret: "minha-chave-secreta-temporaria-troque-depois-em-producao-1234567890"
+  expiration-ms: 86400000
+
+
+lastfm:
+  api-key: ${LASTFM_API_KEY:}
+
+ticketmaster:
+  api-key: ${TICKETMASTER_API_KEY:}

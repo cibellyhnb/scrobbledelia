@@ -1,0 +1,3 @@
+ALTER TABLE scrobbles
+ADD COLUMN destaque BOOLEAN NOT NULL DEFAULT false,
+ADD COLUMN motivo_destaque VARCHAR(50);

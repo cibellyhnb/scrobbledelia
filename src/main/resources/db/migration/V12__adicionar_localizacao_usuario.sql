@@ -1,0 +1,2 @@
+ALTER TABLE usuarios
+ADD COLUMN cidade VARCHAR(100);

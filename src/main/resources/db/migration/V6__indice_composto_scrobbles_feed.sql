@@ -1,0 +1,1 @@
+CREATE INDEX idx_scrobbles_usuario_tocado_em ON scrobbles(usuario_id, tocado_em DESC);

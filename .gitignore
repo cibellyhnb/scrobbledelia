@@ -1,0 +1,19 @@
+# Build
+build/
+bin/
+.gradle/
+out/
+
+# Configuracao local
+.env
+application-local.yml
+log.txt
+.kotlin/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# Sistema
+.DS_Store
