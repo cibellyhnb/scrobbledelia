@@ -1,0 +1,7 @@
+gradle.properties
+build/
+.gradle/
+.git/
+.idea/
+.vscode/
+*.md
