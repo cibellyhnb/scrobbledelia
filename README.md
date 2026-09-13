@@ -22,6 +22,14 @@ Rede social de música construída em cima do histórico de escuta do Last.fm. C
 - **Testes**: JUnit + MockK (unitários) e Testcontainers (integração)
 - **Documentação de API**: Swagger/OpenAPI
 
+## 🌐 Aplicação em produção
+
+A API está no ar em: **https://scrobbledelia.onrender.com**
+
+Documentação interativa (Swagger): **https://scrobbledelia.onrender.com/swagger-ui.html**
+
+> Nota: a instância gratuita "dorme" após 15 minutos de inatividade. A primeira requisição depois disso pode levar 30-50 segundos para responder (é o container "acordando"), enquanto requisições seguintes são rápidas normalmente.
+
 ## Como rodar localmente
 
 ### Pré-requisitos
