@@ -35,7 +35,7 @@ spring:
       enabled: ${RABBITMQ_SSL:false}
 
 server:
-  port: 8082
+  port: ${PORT:8082}
 
 logging:
   level:
